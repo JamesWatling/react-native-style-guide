@@ -60,12 +60,12 @@ This folder structure should reflect something similar to:
 
 This structure should look fairly familiar to anyone with experience developing an app using redux, but lets quickly cover the conventions behind the folder structure and the conventions used above.
 
-## ./actions
+## Actions
  ActionCreators are responsible for converting your application’s data to a format of some remote API and/or updating the state of the store. It is responsible for both making the requests and handling responses.
 
 Actions are simply stored in this folder usually related to some subset of the store, the convention it to name them <noun>-<verb>, eg Lesson-Create, Booking-Confirm. The idea behind this is that you want to categorize then by  object type, rather than the action type.
 
-## ./containers
+## Containers
 First step read [Dan Abramov's post about the different type of components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.n7jx61gix)
 
 Containers are simply `Smart Components`. Smart components are components that are concerned with managing the flow of data to other `dumb` child components. They are responsible for connecting with the store to pass the information to children, provide actions and callbacks for children to use.
